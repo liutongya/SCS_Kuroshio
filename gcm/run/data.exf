@@ -1,0 +1,96 @@
+# *********************
+# External Forcing Data
+# *********************
+ &EXF_NML_01
+ repeatPeriod= 31104000,
+#repeatPeriod= 2592000,
+# readStressOnAgrid = .TRUE.,
+ useAtmWInd = .false.,
+#exf_yftype        = 'RL',
+ exf_iprec         = 64,
+ useExfCheckRange  =.false.,
+#useEXFYearlyFields= .TRUE.,
+#exf_debugLev      = 4,
+ &
+
+# *********************
+ &EXF_NML_02
+#hfluxstartdate1   = 00010101,
+#hfluxstartdate2   = 000000,
+#hfluxperiod       = 2592000.0,
+#
+#swfluxstartdate1   = 00010101,
+#swfluxstartdate2   = 000000,
+#swfluxperiod       = 2592000.0,
+#
+#sfluxstartdate1   = 00010101,
+#sfluxstartdate2   = 000000,
+#sfluxperiod       = 2592000.0,
+#
+ ustressstartdate1 = 00010101,
+ ustressstartdate2 = 000000,
+ ustressperiod     = 2592000.0,
+#
+ vstressstartdate1 = 00010101,
+ vstressstartdate2 = 000000,
+ vstressperiod     = 2592000.0,
+#
+ climsststartdate1 = 00010101,
+ climsststartdate2 = 000000,
+ climsstperiod     = 2592000.0,
+# 1 day restoring timescale for temperature
+ climsstTauRelax   = 2592000.0,
+#
+ climsssstartdate1 = 00010101,
+ climsssstartdate2 = 000000,
+ climsssperiod     = 2592000.0,
+# 1 day restoring timescale for salinity
+ climsssTauRelax   = 2592000.0,
+#
+#hfluxfile    = 'hflux.bin',
+#swfluxfile   = 'swf.bin',
+#sfluxfile    = 'ncep_emp.bin',
+#uwindfile    = 'uwind.bin',
+#vwindfile    = 'vwind.bin',
+ climsstfile  = 'sst.bin',
+ climsssfile  = 'sss.bin',
+ ustressfile  = 'quikscattx.bin',
+ vstressfile  = 'quikscatty.bin',
+#
+ &
+
+# *********************
+ &EXF_NML_03
+ &
+
+# *********************
+ &EXF_NML_04
+
+#climsst_lon0    = 99.05,
+#climsst_lon_inc = 0.1,
+#climsst_lat0    = 0.05,
+#climsst_lat_inc = 0.1,
+#climsst_nlon    = 350,
+#climsst_nlat    = 300,
+
+#climsss_lon0    = 99.05,
+#climsss_lon_inc = 0.1,
+#climsss_lat0    = 0.05,
+#climsss_lat_inc = 0.1,
+#climsss_nlon    = 350,
+#climsss_nlat    = 300,
+
+ &
+&EXF_NML_OBCS
+ obcsEstartdate1   = 00010101,
+ obcsEstartdate2   = 00000,
+ obcsEperiod       = 2592000,
+#
+ obcsNstartdate1   = 00010101,
+ obcsNstartdate2   = 000000,
+ obcsNperiod       = 2592000,
+#
+ obcsSstartdate1   = 00010101,
+ obcsSstartdate2   = 000000,
+ obcsSperiod       = 2592000,
+ &

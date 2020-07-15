@@ -1,0 +1,88 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+
+ viscAr=3.0E-4,
+ viscAh=0,
+ diffKhT=0,
+ diffKrT=3.2E-7,
+ diffKhS=0,
+ diffKrS=3.2E-7,
+#viscC4Smag=2.2,
+ useFullLeith=.TRUE.,
+ viscC4Leith=2.0,
+ viscC4Leithd=2.0,
+ viscA4GridMax=1.0,
+#useAreaViscLength=.TRUE.,
+#useAnisotropicViscAGridMax=.TRUE.,
+ tempAdvScheme=33,
+ saltAdvScheme=33,
+ eosType = 'JMD95Z',
+# multiDimAdvection=.TRUE.,
+# vectorInvariantMomentum=.TRUE.,
+
+ no_slip_sides=.TRUE.,
+ sideDragFactor=3.0,
+ no_slip_bottom=.TRUE.,
+ bottomDragQuadratic=0.003,
+ implicitDiffusion=.TRUE.,
+ implicitFreeSurface=.TRUE.,
+ implicitViscosity=.TRUE.,
+
+ staggerTimeStep=.TRUE.,
+ implicitFreeSurface=.TRUE.,
+ exactConserv=.TRUE.,
+ hFacMin=0.15,
+ hFacMindr=30.,
+ hFacInf=0.1,
+ hFacSup=5.,
+ readBinaryPrec=64,
+#- not safe to use globalFiles in multi-processors runs
+ globalFiles=.TRUE.,
+ useSingleCpuIO=.TRUE.,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=500,
+ cg2dTargetResidual=1.E-5,
+ &
+
+# Time stepping parameters
+ &PARM03
+ nIter0= 0,
+ nTimeSteps = 1296000,
+ basetime=0,
+ deltaT=1200.0,
+ abEps=0.1,
+ momDissip_In_AB=.FALSE.,
+ dumpFreq=31104000,
+ pChkptFreq=31104000.,
+ chkptFreq=2592000.,
+ monitorSelect=2,
+ monitorFreq=2592000.,
+
+ &
+
+# Gridding parameters
+ &PARM04
+ usingSphericalPolarGrid=.TRUE.,
+ ygOrigin=0.0,
+ xgOrigin=99.,
+ dxSpacing=0.1,
+ dySpacing=0.1, 
+ delR=10.,15.,20.,25.,30.,30.,30.,30.,30.,30.,
+        30.,30.,30.,30.,30.,30.,30.,30.,30.,30.,30.,30.,40.,
+       50.,80.,120.,200.,300.,450.,600.,700.,850.,1000.,
+ &
+
+# Input datasets
+ &PARM05
+ bathyFile='topog.bin',
+ hydrogThetaFile='Temp.bin',
+ hydrogSaltFile='Salt.bin',
+ pSurfInitFile= 'avisoadt.bin',
+ &

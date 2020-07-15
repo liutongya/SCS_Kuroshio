@@ -1,0 +1,37 @@
+ &PTRACERS_PARM01
+ PTRACERS_numInUse=3,
+ PTRACERS_Iter0=311040,
+#
+# The following option is now obsolete:
+#  PTRACERS_write_mnc=.TRUE.,
+#
+# tracer 1 - P1
+ PTRACERS_names(1)='P1',
+ PTRACERS_units(1)='mol/m^3',
+ PTRACERS_advScheme(1)=33,
+ PTRACERS_diffKh(1)=0.E3,
+ PTRACERS_diffKr(1)=1.2E-5,
+ PTRACERS_useGMRedi(1)=.TRUE. ,
+ PTRACERS_useKPP(1)=.TRUE. ,
+ PTRACERS_initialFile(1)='p1.bin',
+# tracer 2 - P2
+ PTRACERS_names(2)='P2',
+ PTRACERS_units(2)='mol/m^3',
+ PTRACERS_advScheme(2)=33,
+ PTRACERS_diffKh(2)=0.E3,
+ PTRACERS_diffKr(2)=1.2E-5,
+ PTRACERS_useGMRedi(2)=.TRUE. ,
+ PTRACERS_useKPP(2)=.TRUE. ,
+ PTRACERS_initialFile(2)='p2.bin',
+# tracer 3 - P3
+ PTRACERS_names(3)='P3',
+ PTRACERS_units(3)='mol/m^3',
+ PTRACERS_advScheme(3)=33,
+ PTRACERS_diffKh(3)=0.E3,
+ PTRACERS_diffKr(3)=1.2E-5,
+ PTRACERS_useGMRedi(3)=.TRUE. ,
+ PTRACERS_useKPP(3)=.TRUE. ,
+ PTRACERS_initialFile(3)='p3.bin',
+ &
+
+

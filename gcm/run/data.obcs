@@ -1,0 +1,62 @@
+# Open-boundaries
+ &OBCS_PARM01
+# This flag turns off checking and fixing problematic topography across 
+# open boundaries.
+ OBCSfixTopo=.FALSE.,
+ OB_Jnorth= 360*-1,
+ OB_Jsouth= 360*1,
+ OB_Ieast = 300*-1,
+
+ useOBCSprescribe = .TRUE.,
+ useOBCSsponge=.TRUE.,
+#useOrlanskiNorth = .TRUE.,
+#useOrlanskiSouth = .TRUE.,
+#useOrlanskiEast = .TRUE.,
+#useStevensNorth = .TRUE.,
+#useStevensEast = .TRUE., 
+ 
+ useOBCSbalance=.TRUE.,
+ OBCS_balanceFacN= 1.,
+ OBCS_balanceFacS= 1,
+ OBCS_balanceFacE= 1.,
+
+ OBNuFile = 'HY_NorthU.bin',
+ OBSuFile = 'HY_SouthU.bin',
+ OBEuFile = 'HY_EastU.bin',
+ OBNvFile = 'HY_NorthV.bin',
+ OBSvFile = 'HY_SouthV.bin',
+ OBEvFile = 'HY_EastV.bin',
+
+ OBNsFile = 'snorth.bin',
+ OBNtFile = 'tnorth.bin',
+ OBEsFile = 'seast.bin',
+ OBEtFile = 'teast.bin',
+ OBSsFile = 'ssouth.bin',
+ OBStFile = 'tsouth.bin',
+
+ OBCS_monitorFreq= 2592000.,
+ OBCS_monSelect = 1,
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+ Cmax=1,
+ cVelTimeScale=1200.,
+ &
+# *****************************************
+# Sponge Layer Parameters.
+# *****************************************
+ &OBCS_PARM03
+ Urelaxobcsinner=432000.E0,
+ Urelaxobcsbound=43200.E0,
+ Vrelaxobcsinner=432000.E0,
+ Vrelaxobcsbound=43200.E0,
+ spongeThickness=20,
+ &
+
+# Stevens parameters
+ &OBCS_PARM04
+ TrelaxStevens = 15552000.,
+ SrelaxStevens = 15552000.,
+ &
+

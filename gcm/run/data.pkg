@@ -1,0 +1,15 @@
+# Packages
+ &PACKAGES
+ useOBCS=.TRUE.,
+# useGMRedi=.TRUE.,
+ useKPP=.TRUE.,
+#useMY82=.TRUE.,
+ useEXF=.TRUE.,
+ useCal=.TRUE.,
+ useDiagnostics=.TRUE.,
+#useGCHEM       =.TRUE.,
+#usePtracers=.TRUE.,
+#useRBCS=.TRUE.,
+#useLayers=.TRUE.,
+#useMNC=.TRUE.,
+ &
